@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="/css/admin/adm_hg.css">
+<link rel="stylesheet" href="/css/burger.css">
+<link rel="stylesheet" href="/css/admin/adm_hg_edit.css">
+<div class="container">
+    <h1>CRUD Jugos</h1>
+    
+<td>
+    <a href="#modal" class="btn btn-outline-primary mt-4 modal-show"><i class='bx bxs-plus-circle btn-new'> Crear nuevo registro</i></a>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <a class="modal-hide" href="#">✕</a>
+
+            <div class="formulario">
+                <!-- El /save nos permite capturar todos nuestros datos controlador-->
+                <form action="/adm_jugos" class="main-form" method="POST">
+
+                    <div class="foto">
+                        <label for="usuario">Imagen</label>
+                        <input type="file" id="foto_jugo" name="foto_jugo">
+                    </div>
+
+                    <div class="nombre">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="nombre_jugo" name="nombre_jugo" placeholder="Nombre jugos">
+                    </div>
+
+                    <div class="descripcion">
+                        <label for="name">Descripción</label>
+                        <textarea name="descripcion_jugo" id="descripcion_jugo" cols="30" rows="2"
+                            placeholder="Descripción jugos"></textarea>
+
+                    </div>
+
+                    <div class="precio">
+                        <label for="name">Precio</label>
+                        <input type="number" id="precio_jugo" name="precio_jugo" placeholder="Precio jugos">
+                    </div>
+
+
+                    <button type="submit" class="button">Guardar</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</td>
+    <table class="table">
+        <thead>
+            <tr class="hola">
+                <th scope="col">Foto</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each results}}
+            <tr>
+                <td><img src="/img/{{ foto_jugo}}" alt="" width="150px"></td>
+                <td id="gono">{{ nombre_jugo}}</td>
+                <td id="gono">{{ descripcion_jugo}}</td>
+                <td id="gono">{{ precio_jugo}}</td>
+                <td>
+                    <a class="btn btn-outline-primary mt-4 modal-show-edit" href="#modal-edit"><i
+                            class='bx bxs-eyedropper'></i> Editar</i></a>
+
+                    <div class="modal-edit" id="modal-edit">
+                        <div class="modal-content-edit">
+                            <a class="modal-hide-edit" href="#">✕</a>
+                            <div class="formulario">
+                                <!-- El /save nos permite capturar todos nuestros datos controlador-->
+                                <form action="/adm_jugos" class="main-form" method="POST">
+
+                                    <div class="foto">
+                                        <label for="usuario">Imagen</label>
+                                        <input type="file" id="foto_jugos" name="foto_jugos" value="">
+                                    </div>
+
+                                    <div class="nombre">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" id="nombre_jugos" name="nombre_jugos" placeholder="Nombre Sandwich"
+                                            value="">
+                                    </div>
+
+                                    <div class="descripcion">
+                                        <label for="name">Descripción</label>
+                                        <textarea name="descripcion_jugos" id="descripcion_jugos" cols="30" rows="2"
+                                            placeholder="Descripción Sandwich" value=""></textarea>
+
+                                    </div>
+
+                                    <div class="precio">
+                                        <label for="name">Precio</label>
+                                        <input type="number" id="precio_jugos" name="precio_hg"
+                                            placeholder="Precio Sandwich" value="values=""">
+                                    </div>
+
+
+                                    <button type="submit" class="button">Guardar</button>
+
+                                </form>
+                            </div>
+                </td>
+                <td>
+                    <a href="/" class="btn btn-outline-danger mt-4 delete"><i class="bx 
+                        bxs-trash-alt"> Eliminar</i></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+{{!-- <a class="btn btn-outline-primary mt-4 modal-show-edit" href="#modal-edit"><i
+        class='bx bxs-eyedropper'></i>Editar</i></a>
+
+<div class="modal-edit" id="modal-edit">
+    <div class="modal-content-edit">
+        <a class="modal-hide-edit" href="#">✕</a>
+        <!-- CONTENIDO-->
+    </div>
+</div> --}}

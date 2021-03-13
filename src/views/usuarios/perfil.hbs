@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/perfil.css">
+
+<div class="contenedor-perfil">
+<h1>Vista general de la cuenta</h1>
+<h2>Perfil</h2>
+
+<div class="main-usuarios">
+{{#each users}}
+    <div class="usuarios">
+        <div class="info-usuarios">
+            <p>Nombre de usuario:</p>
+            <p>Correo electrónico:</p>
+            <p>Teléfono:</p>
+            <p></p>
+        </div>
+        
+        <div class="datos-usuarios">
+            <p>{{ usuario }}</p>
+            <p>{{ email }}</p>
+            <p>{{ telefono }}</p>
+        </div>
+        <a href="/edit/" class="btn-p"> Editar Perfil</a>
+    </div>
+    {{/each}}
+</div>
+        <a href="/login" class="btn-danger danger">Cerrar Sesión</a>
+
+</div>

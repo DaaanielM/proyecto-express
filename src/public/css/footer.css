@@ -1,0 +1,78 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.301);
+    position: absolute;   
+    bottom: 0;
+    height: 150px;
+    font-family: 'Staatliches', cursive;
+
+}
+.footer__items{
+    color: rgb(207, 207, 207);
+    flex-grow: 1;
+    font-size: 16px;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes h2{
+    font-size: 18px;
+    color: rgba(236, 231, 225, 0.829);
+}
+.icons{
+    font-size: 25px;
+    transition: .4s all;
+}
+#fb{
+    color: rgb(62, 111, 218);
+    margin: 5px;
+    display: inline-block;
+}
+#wp{
+    color: rgb(14, 214, 14);
+    margin: 5px;
+    display: inline-block;
+}
+
+#ig{
+    color:#FC466B;
+    border-radius: 2px;
+    margin: 5px;
+    display: inline-block;
+
+}
+#fb:hover{
+    border-radius: 50%;
+    font-size: 35px;
+}
+#wp:hover{
+    border-radius: 50%;
+    font-size: 35px;
+
+}
+#ig:hover{
+    border-radius: 50%;
+    font-size: 35px;
+}
+@media screen and (min-width: 1024px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .contenido_footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+}

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&family=Staatliches&display=swap');
+
+.main-gaseosas{
+    width: 70%;
+    height: 100%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.card-gaseosas{
+    display: flex;
+    flex-direction: column;
+    justify-content: wrap;
+    width: 400px;
+    text-align: center;
+    margin: 2% 10px;
+    border: 1px solid lightgray;
+    background: rgb(245, 237, 255);
+    height: 100%;
+
+}
+
+.img-gaseosas img{
+    width: 100%;
+}
+
+.nombre_gaseosas
+{
+    margin-top: 15px;
+    color: rgb(211, 69, 175);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+}
+
+.descripcion_gaseosas
+{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    margin: 0 5%;
+    font-weight: 500;
+
+}
+
+.precio_gaseosas{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.dolar{
+    color: rgb(14, 158, 14);
+    font-weight: 500;
+    
+}
+
+.agregar_gaseosas
+{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    background: rgb(211, 69, 175);
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-size: 24px;
+    border-width: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+
+.agregar_gaseosas:hover{
+    background: rgb(206, 129, 230);
+}

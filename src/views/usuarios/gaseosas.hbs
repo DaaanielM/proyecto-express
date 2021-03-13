@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/gaseosas.css">
+
+
+<div class="main-gaseosas">
+    {{#each results}}
+    <div class="card-gaseosas">
+        <img src="/img/{{ foto_gaseosas }}"  alt="" class="img-gaseosas ">
+        <h2 class="nombre_gaseosas">{{ nombre_gaseosas}}</h2>
+        <p class="descripcion_gaseosas">{{ descripcion_gaseosas }}</p>
+        <p class="precio_gaseosas"><span class="dolar">$</span>{{ precio_gaseosas }}</p>
+        <button type="submit" class="agregar_gaseosas">Agregar</button>
+    </div>   
+    {{/each}}
+</div>       
+

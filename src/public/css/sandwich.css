@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&family=Staatliches&display=swap');
+
+
+.main-sd{
+    width: 70%;
+    margin: 2% auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+}
+
+.card-sd{
+    display: flex;
+    flex-direction: column;
+    justify-content: wrap;
+    width: 400px;
+    height: 100%;
+    text-align: center;
+    background: rgb(241, 230, 216);
+    margin: 2% 10px;
+    border-radius: 5px;
+
+}   
+
+.img-sd img{
+    width: 100%;
+}
+
+.nombre_sd{
+    margin-top: 15px;
+    color: rgb(240, 145, 37);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+}
+
+.descripcion_sd{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    margin: 0 5%;
+    font-weight: 500;
+
+}
+
+.precio_sd{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.dolar{
+    color: rgb(14, 158, 14);
+    font-weight: 500;
+    
+}
+
+.agregar_sd{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 400px;
+    height: 100%;
+    background: rgb(216, 115, 48);
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-size: 24px;
+    border-width: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.agregar_sd:hover{
+    background: rgb(251, 184, 108);
+
+}

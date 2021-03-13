@@ -1,0 +1,43 @@
+    <link rel="stylesheet" href="/css/login.css">
+
+    <section>
+        <div class="container-login">
+            <div class="user signinBx">
+                <div class="imgBx"><img
+                        src="/img/h2.jpg"
+                        alt="" /></div>
+                <div class="formBx">
+                    <form action="" onsubmit="return false;">
+                        <h2>Inicia sesión</h2>
+                        <input type="text" name="" placeholder="Usuario" />
+                        <input type="password" name="" placeholder="Contraseña" />
+                        <button class="btn btn-primary "><a href="/inicio" class="text-white" id="ingresar">Ingresar</a></button>
+                        <p class="signup">
+                            No tienes una cuenta?
+                            <a href="#" onclick="toggleForm();">Registrarme</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form action="/login" method="POST" >
+                        <h2>Crear una cuenta</h2>
+                        <input type="text" id="usuario" name="usuario" placeholder="Usuario" />
+                        <input type="email" id="email" name="email" placeholder="Email" />
+                        <input type="tel" id="telefono" name="telefono" placeholder="Telefono" />
+                        <input type="password" id="contra" name="contra" placeholder="Crea tu contraseña" />
+                        <button type="submit" class="registrarme">Registrarme</button>
+                        
+                        <p class="signup">
+                            Ya tienes una cuenta?
+                            <a href="#" onclick="toggleForm();">Iniciar Sesión</a>
+                        </p>
+                    </form>
+                </div>
+                <div class="imgBx"><img
+                        src="/img/h6.jpg"  
+                        alt="" /></div>
+            </div>
+        </div>
+    </section>

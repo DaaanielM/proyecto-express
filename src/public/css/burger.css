@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,200;0,300;0,600;1,200;1,500;1,600&family=Reggae+One&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&family=Staatliches&display=swap');
+
+.main-hg{
+    width: 70%;
+    margin: 2% auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+}
+
+.card-hg{
+    display: flex;
+    flex-direction: column;
+    justify-content: wrap;
+    width: 400px;
+    text-align: center;
+    background: black;
+    margin: 2% 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.img-hg img{
+    width: 400px;
+    
+}
+
+.nombre_hg{
+    margin-top: 15px;
+    color: rgb(212, 195, 37);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+}
+
+.descripcion_hg{
+    color: #fff;
+    font-size: 17px;
+    margin: 0 5%;
+    font-weight: 500;
+
+}
+
+.precio_hg{
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.dolar{
+    color: rgb(14, 158, 14);
+    font-weight: 500;
+    
+}
+
+.agregar_hg{
+    border: none;
+    padding: 8px;
+}
+.agregar_hg{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 400px;
+    height: 100%;
+    background: rgb(241, 203, 34);
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Reggae One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Staatliches', cursive;
+    font-size: 24px;
+    border-width: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.agregar_hg:hover{
+    background: rgb(195, 175, 175);
+}

@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/jugos.css">
+
+
+<div class="main-jugo">
+    {{#each results}}
+    <div class="card-jugo">
+        <img src="/img/{{ foto_jugo }}"  alt="" class="img-jugo ">
+        <h2 class="nombre_jugo">{{ nombre_jugo}}</h2>
+        <p class="descripcion_jugo">{{ descripcion_jugo }}</p>
+        <p class="precio_jugo"><span class="dolar">$</span>{{ precio_jugo }}</p>
+        <button type="submit" class="agregar_jugo">Agregar</button>
+    </div>   
+    {{/each}}
+</div>       
+

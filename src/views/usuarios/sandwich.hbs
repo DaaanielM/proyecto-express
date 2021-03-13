@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/sandwich.css">
+
+
+<div class="main-sd">
+    {{#each results}}
+    <div class="card-sd">
+        <img src="/img/{{ foto_sandwich }}"  alt="" class="img-sd ">
+        <h2 class="nombre_sd">{{ nombre_sandwich }}</h2>
+        <p class="descripcion_sd">{{ descripcion_sandwich }}</p>
+        <p class="precio_sd"><span class="dolar">$</span>{{ precio_sandwich }}</p>
+        <button type="submit" class="agregar_sd">Agregar</button>
+    </div>   
+    {{/each}}
+</div>       
+

@@ -1,0 +1,75 @@
+.contenedor-perfil{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    color:rgb(154, 155, 156);
+    margin-bottom: 5%;
+    letter-spacing: 1px;
+}
+
+.main-usuarios{
+    width: 40%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.usuarios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info-usuarios{
+    margin: 5%;
+}
+.info-usuarios p{
+    color: rgb(175, 173, 173);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    
+}
+.datos-usuarios{
+    margin: 5%;
+}
+.datos-usuarios p{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.btn-p{
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgb(18, 129, 194);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn-p:hover{
+    color: #fff;
+    background: rgb(154, 155, 156);
+}
+
+.danger{
+    display: block;
+    text-align: center;
+    width: 120px;
+    margin: auto;
+    padding: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+}

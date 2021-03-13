@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/adicionales.css">
+
+
+
+
+<div class="main-adicionales">
+    {{#each results}}
+    <div class="card-adicionales">
+        <img src="/img/{{ foto_adicionales }}"  alt="" class="img-adicionales ">
+        <h2 class="nombre_adicionales">{{ nombre_adicionales}}</h2>
+        <p class="descripcion_adicionales">{{ descripcion_adicionales }}</p>
+        <p class="precio_adicionales"><span class="dolar">$</span>{{ precio_adicionales }}</p>
+        <button type="submit" class="agregar_adicionales">Agregar</button>
+    </div>   
+    {{/each}}
+</div>       
+

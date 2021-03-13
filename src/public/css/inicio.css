@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.inicio{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #383838, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #383838, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title-inicio h1{
+    color: rgb(240, 209, 35);
+    font-size: 120px;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    font-family: 'Reggae One', cursive;
+    font-family: 'Staatliches', cursive;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    letter-spacing: 2px;
+}
+
+.texto-inicio{
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    font-family: 'Reggae One', cursive;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 1px;
+}
+
+#hamburguesas{
+    font-size: 90px;
+    color: rgb(240, 209, 35);
+}
+
+.flecha-inicio{
+    color: rgb(240, 209, 35);
+    font-size: 32px;
+}
+
+.correo{
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 650px;
+}
+
+::placeholder{
+    font-family: 'Reggae One', cursive;
+    font-size: 14px;
+    color: rgb(184, 183, 183);
+}
+
+.button-inicio button{
+    border: none;
+    padding: 2px;
+    width: 80px;
+    border-radius: 2px;
+    color: rgb(241, 224, 67);
+    background: rgba(0, 0, 0, 0);
+    font-family: 'Reggae One', cursive;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 150px;
+
+}

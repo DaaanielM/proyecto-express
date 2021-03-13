@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/burger.css">
+
+
+<div class="main-hg">
+        {{#each results}}
+    <div class="card-hg">
+        <img src="/img/{{ foto_hg }}"  alt="" class="img-hg ">
+        <h2 class="nombre_hg">{{ nombre_hg }}</h2>
+        <p class="descripcion_hg"> {{ descripcion_hg }} </p>
+        <p class="precio_hg"><span class="dolar">$</span> {{ precio_hg }} </p>
+        <button type="submit" class="agregar_hg">Agregar</button>
+    </div>
+        {{/each}}
+</div>       
+

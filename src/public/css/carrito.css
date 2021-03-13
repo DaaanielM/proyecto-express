@@ -1,0 +1,19 @@
+.main-carrito{
+    width: 80%;
+    margin: 2% auto;
+}
+
+
+
+.link-agregar{
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    background: rgb(48, 114, 221);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+}

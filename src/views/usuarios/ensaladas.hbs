@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/ensaladas.css">
+
+
+
+
+    <div class="main-ensaladas">
+        {{#each results}}
+        <div class="card-ensaladas">
+            <img src="/img/{{ foto_ensaladas }}"  alt="" class="img-ensaladas ">
+            <h2 class="nombre_ensaladas">{{ nombre_ensaladas}}</h2>
+            <p class="descripcion_ensaladas">{{ descripcion_ensaladas }}</p>
+            <p class="precio_ensaladas"><span class="dolar">$</span>{{ precio_ensaladas }}</p>
+            <button type="submit" class="agregar_ensaladas">Agregar</button>
+        </div>   
+        {{/each}}
+    </div>       
+
