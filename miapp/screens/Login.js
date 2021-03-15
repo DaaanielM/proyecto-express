@@ -1,12 +1,12 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-import NombreCompleto from "./NombreComponent";
-import Edad from "./EdadComponent";
-import Usuario from "./UsuarioComponent";
-import Contra from "./ContraComponent";
-import Boton from "./Button";
+import NombreCompleto from '../components/Form/NombreComponent';
+import Edad from '../components/Form/EdadComponent';
+import Usuario from '../components/Form/UsuarioComponent';
+import Contra from '../components/Form/ContraComponent';
+import Boton from '../components/Form/Button';
 
 export default function App() {
 	return (
@@ -17,7 +17,7 @@ export default function App() {
 
 				<Contra />
 			</View>
-			<Boton text="Iniciar Sesión" />
+			<Boton text='Iniciar Sesión' />
 		</View>
 	);
 }
@@ -25,22 +25,22 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#000000",
-		alignItems: "center",
-		justifyContent: "center",
+		backgroundColor: '#000000',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	form: {
-		backgroundColor: "transparent",
+		backgroundColor: 'transparent',
 		padding: 30,
 		borderRadius: 15,
 		borderWidth: 1,
-		borderColor: "#fff",
+		borderColor: '#fff',
 	},
 	titulo: {
 		margin: 30,
 		fontSize: 26,
-		color: "#f01d71",
-		fontWeight: "bold",
+		color: '#f01d71',
+		fontWeight: 'bold',
 		letterSpacing: 1,
 	},
 });
