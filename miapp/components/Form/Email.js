@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
 	StyleSheet,
@@ -7,14 +8,15 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 
-export default function Usuario() {
+export default function Email() {
 	return (
 		<View>
-			<Text style={styles.text}> Usuario </Text>
+			<Text style={styles.text}> Email </Text>
 			<TextInput style={styles.input} />
 		</View>
 	);
 }
+
 const styles = StyleSheet.create({
 	text: {
 		color: '#fff',
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderColor: '#ABABAB',
 		borderRadius: 18,
-		padding: 8,
+		padding: 7,
 		margin: 10,
 		width: 250,
 		color: '#fff',

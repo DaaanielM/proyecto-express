@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Boton({ text, onPress }) {
+export default function BotonLogin({ text, onPress }) {
 	const navigation = useNavigation();
 	return (
-		<TouchableOpacity onPress={() => navigation.navigate('Home')}>
+		<TouchableOpacity onPress={() => navigation.navigate('Login')}>
 			<View style={styles.button}>
 				<Text style={styles.buttonText}>{text}</Text>
 			</View>
@@ -23,7 +23,7 @@ export default function Boton({ text, onPress }) {
 const styles = StyleSheet.create({
 	button: {
 		borderRadius: 18,
-		padding: 10,
+		padding: 9,
 		backgroundColor: '#FC1515',
 		marginTop: 20,
 		margin: 10,

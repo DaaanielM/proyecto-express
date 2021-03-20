@@ -10,23 +10,26 @@ import Boton from '../components/Form/Button';
 import Burger from '../components/Form/Burger';
 import ButtonRegister from '../components/Form/ButtonRegister';
 import Email from '../components/Form/Email';
+import Login from '../screens/Login';
+import BotonLogin from '../components/Form/BotonLogin';
+import ImagenRegister from '../components/Form/ImagenRegister';
 
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<Burger />
+			<ImagenRegister />
 
-			<Text style={styles.titulo}>Inicia Sesión</Text>
+			<Text style={styles.titulo}>Registrarme</Text>
 			<View style={styles.form}>
 				<Usuario />
 
-				<Contra />
+				<Email />
 
-				<Boton text='Iniciar Sesión' />
+				<Contra />
 
 				<ButtonRegister text='Registrarme' />
 
-				<Text>Brand Code &copy; 2021</Text>
+				<BotonLogin text='Iniciar Sesión' />
 			</View>
 		</View>
 	);
@@ -44,17 +47,14 @@ const styles = StyleSheet.create({
 		padding: 30,
 		borderRadius: 15,
 		borderWidth: 1,
-		borderColor: '#ABABAB',
-		marginBottom: 100,
-		width: '80%',
+		borderColor: '#fff',
+		marginBottom: 50,
 	},
 	titulo: {
-		marginBottom: 20,
-		fontSize: 24,
+		margin: 30,
+		fontSize: 22,
 		color: '#fff',
 		fontWeight: 'bold',
-		letterSpacing: 2,
-		color: '#fff',
-		textAlign: 'center',
+		letterSpacing: 1,
 	},
 });
