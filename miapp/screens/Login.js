@@ -10,13 +10,15 @@ import Boton from '../components/Form/Button';
 import Burger from '../components/Form/Burger';
 import ButtonRegister from '../components/Form/ButtonRegister';
 import Email from '../components/Form/Email';
+import Error from '../components/Form/Error';
 
-export default function App() {
+export default function Login() {
 	return (
 		<View style={styles.container}>
 			<Burger />
 
 			<Text style={styles.titulo}>Inicia Sesión</Text>
+			<Error error={'El usuario o la contraseña son incorrectos'} />
 			<View style={styles.form}>
 				<Usuario />
 

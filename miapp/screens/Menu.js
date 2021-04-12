@@ -1,16 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Principal from '../components/Home/Principal';
-import BtnOrden from '../components/Home/BtnOrden';
-export default function HomeScreen() {
+import ImgComponent from '../components/Menu/ImgComponent';
+
+export default function Menu() {
 	return (
 		<View style={styles.container}>
-			<Principal />
-			<BtnOrden text='Comprar' />
+			<Text stlyle={styles.texto}>Aquí va el menú xd</Text>
+			<ImgComponent />
 		</View>
 	);
 }
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,

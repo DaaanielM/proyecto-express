@@ -14,7 +14,7 @@ import Login from '../screens/Login';
 import BotonLogin from '../components/Form/BotonLogin';
 import ImagenRegister from '../components/Form/ImagenRegister';
 
-export default function App() {
+export default function Registry() {
 	return (
 		<View style={styles.container}>
 			<ImagenRegister />
