@@ -1,0 +1,31 @@
+/* .catpadre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #dfca0e;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    margin: 10px;
+} */
+
+.catpadre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.categorias {
+    color: #dfca0e;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 15px;
+}

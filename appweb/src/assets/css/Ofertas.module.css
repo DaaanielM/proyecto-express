@@ -1,0 +1,20 @@
+.ofertas {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.nombre {
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    color: #dfca0e;
+    text-transform: uppercase;
+}
+
+.imagen {
+    width: 800px;
+    height: 200px;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 import styles from '../../assets/css/Cards.module.css';
-
+import ListCategorias from '../Burger/ListCategorias';
 import { getProductos } from '../services/index';
 export default function ListProducts() {
 	const [products, setProducts] = useState([]);
@@ -18,6 +18,7 @@ export default function ListProducts() {
 
 	return (
 		<div className={styles.mainproducts}>
+			<ListCategorias />
 			<div className={styles.mainhg}>
 				{products.map((item) => (
 					<div className={styles.cardhg} key={item.id}>

@@ -2,9 +2,13 @@ import React from 'react';
 import styles from '../../assets/css/Contacto.module.css';
 import FooterComponent from '../../components/Burger/FooterComponent';
 import '../../assets/css/Footer.css';
+import Ofertas from '../../components/Burger/Ofertas';
+
 const ContactComponent = () => {
 	return (
 		<div className={styles.contacto}>
+			<Ofertas />
+
 			<div className='container' id='contact'>
 				<h2 className='title has-text-centered' id={styles.titulo}>
 					Envianos un mensaje

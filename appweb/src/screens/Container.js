@@ -6,7 +6,7 @@ import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Home from './Home';
 import Usuarios from '../components/Usuarios';
 // import Roles from '../components/Roles';
-import Categorias from './Categorias';
+// import Categorias from './Categorias';
 import Productos from './Productos';
 import Contacto from './Contacto';
 import Perfil from './Perfil';
@@ -24,8 +24,8 @@ export default function Container() {
 					<Route path={'/Contacto'} component={Contacto}></Route>
 					<Route path={'/Perfil'} component={Perfil}></Route>
 					<Route path={'/Productos'} component={Productos}></Route>
-					<Route path={'/Categorias'} component={Categorias}></Route>
 					<Route path={'/Login'} component={Login}></Route>
+					{/* <Route path={'/Categorias'} component={Categorias}></Route> */}
 				</Switch>
 			</>
 		</Router>

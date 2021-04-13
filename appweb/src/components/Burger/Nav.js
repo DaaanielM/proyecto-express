@@ -59,7 +59,7 @@ export default function Nav() {
 							Perfil
 						</Link>
 					</li>
-					<li className={styles.logoli}>
+					{/* <li className={styles.logoli}>
 						<Link to={'/Categorias'} className={styles.logolink}>
 							<FontAwesomeIcon
 								icon={faAtom}
@@ -67,7 +67,7 @@ export default function Nav() {
 							/>
 							Categorias
 						</Link>
-					</li>
+					</li> */}
 					<li className={styles.logoli}>
 						<Link to={'/Login'} className={styles.logolink}>
 							<FontAwesomeIcon

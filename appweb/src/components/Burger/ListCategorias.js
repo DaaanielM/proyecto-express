@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getCategorias } from '../services/index';
 import FooterComponent from '../../components/Burger/FooterComponent';
 import '../../assets/css/Footer.css';
-import Button from '../../components/Button';
+import styles from '../../assets/css/Categorias.module.css';
 
 const ListCategorias = () => {
 	const [categorias, setCategorias] = useState([]);
@@ -18,42 +18,10 @@ const ListCategorias = () => {
 	}, []);
 	return (
 		<>
-			<div className='container'>
-				<br />
-				<br />
-				<table className='table container is-6 is-bordered is-striped is-hoverable'>
-					<thead className='has-background-info'>
-						<tr className='hola'>
-							<th
-								scope='col'
-								className='has-text-white has-text-centered'>
-								ID
-							</th>
-
-							<th
-								scope='col'
-								className='has-text-white has-text-centered'>
-								Categoría
-							</th>
-							<th
-								scope='col'
-								className='has-text-white has-text-centered'>
-								Acciones
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{categorias.map((item) => (
-							<tr>
-								<td>{item.id}</td>
-								<td>{item.nombre}</td>
-								<td>
-									<Button />
-								</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
+			<div className={styles.catpadre}>
+				{categorias.map((item) => (
+					<h2 className={styles.categorias}>{item.nombre}</h2>
+				))}
 			</div>
 			<FooterComponent />
 		</>

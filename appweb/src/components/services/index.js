@@ -37,3 +37,15 @@ export async function getPerfil() {
 		console.log(error);
 	}
 }
+
+export async function getOfertas() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/ofertas/listar`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}
