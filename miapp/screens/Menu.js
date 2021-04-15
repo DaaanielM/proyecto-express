@@ -1,23 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-import ImgComponent from '../components/Menu/ImgComponent';
-
+import { View, Text, Image, StyleSheet } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
+import CardComponent from '../components/Menu/CardComponent';
 export default function Menu() {
 	return (
 		<View style={styles.container}>
-			<Text stlyle={styles.texto}>Aquí va el menú xd</Text>
-			<ImgComponent />
+			<CardComponent />
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
 	texto: {
 		color: 'red',
 	},

@@ -9,30 +9,31 @@ import Contra from '../components/Form/ContraComponent';
 import Boton from '../components/Form/Button';
 import ButtonRegister from '../components/Form/ButtonRegister';
 import Email from '../components/Form/Email';
-import Error from '../components/Form/Error';
+import Login from './Login';
+import BotonLogin from '../components/Form/BotonLogin';
+// import ImagenRegister from '../components/Form/ImagenRegister';
 
-export default function Login() {
+export default function Registro() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
 				<Image
 					style={styles.burger}
-					source={require('../Images/5.png')}
+					source={require('../Images/registry.png')}
 				/>
-				<Text style={styles.titulo}>Inicia Sesión</Text>
+				<Text style={styles.titulo}>Registrarme</Text>
 			</View>
-
 			<View style={styles.form}>
-				{/* <Error error={'El usuario o la contraseña son incorrectos'} /> */}
-
-				<View style={styles.formContainer}>
+				<View style={styles.formRegistro}>
 					<Usuario />
+
+					<Email />
 
 					<Contra />
 
-					<Boton text='Iniciar Sesión' />
-
 					<ButtonRegister text='Registrarme' />
+
+					<BotonLogin text='Iniciar Sesión' />
 				</View>
 			</View>
 		</View>
@@ -42,7 +43,7 @@ export default function Login() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#E93013',
+		backgroundColor: '#F1C70D',
 	},
 	header: {
 		flex: 2,
@@ -54,10 +55,15 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		borderTopLeftRadius: 30,
 		borderTopRightRadius: 30,
-		paddingVertical: 150,
+		paddingVertical: 140,
 		paddingHorizontal: 30,
 		borderColor: '#ABABAB',
 		paddingBottom: 300,
+	},
+	burger: {
+		marginTop: 50,
+		width: 180,
+		height: 180,
 	},
 	titulo: {
 		marginBottom: 20,
@@ -68,17 +74,12 @@ const styles = StyleSheet.create({
 		color: '#fff',
 		textAlign: 'center',
 	},
-	burger: {
-		marginTop: 50,
-		width: 180,
-		height: 180,
-	},
-	formContainer: {
+	formRegistro: {
 		borderWidth: 1,
 		borderColor: '#c6c6c6',
 		borderRadius: 30,
 		paddingHorizontal: 50,
 		paddingVertical: 30,
-		marginTop: -40,
+		marginTop: -70,
 	},
 });

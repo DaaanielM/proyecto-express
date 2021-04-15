@@ -49,3 +49,14 @@ export async function getOfertas() {
 		console.log(error);
 	}
 }
+export async function getPedidos() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/pedidos/listar/2`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}

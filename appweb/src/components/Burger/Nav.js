@@ -6,9 +6,9 @@ import {
 	faHome,
 	faIdBadge,
 	faUser,
-	faAtom,
 	faSignInAlt,
 	faTable,
+	faAtom,
 } from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/img/logo.png';
 
@@ -57,6 +57,15 @@ export default function Nav() {
 								className={styles.fontIcon}
 							/>
 							Perfil
+						</Link>
+					</li>
+					<li className={styles.logoli} id='guia'>
+						<Link to={'/Pedidos'} className={styles.logolink}>
+							<FontAwesomeIcon
+								icon={faAtom}
+								className={styles.fontIcon}
+							/>
+							Pedidos
 						</Link>
 					</li>
 					{/* <li className={styles.logoli}>

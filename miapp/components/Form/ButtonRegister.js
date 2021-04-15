@@ -12,7 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function ButtonRegister({ text, onPress }) {
 	const navigation = useNavigation();
 	return (
-		<TouchableOpacity onPress={() => navigation.navigate('Registry')}>
+		<TouchableOpacity onPress={() => navigation.navigate('Registro')}>
 			<View style={styles.button}>
 				<Text style={styles.buttonText}>{text}</Text>
 			</View>
@@ -23,10 +23,10 @@ export default function ButtonRegister({ text, onPress }) {
 const styles = StyleSheet.create({
 	button: {
 		borderRadius: 18,
-		padding: 10,
+		padding: 12,
 		backgroundColor: '#1BC4DE',
-		margin: 10,
 		width: 250,
+		marginTop: 20
 	},
 	buttonText: {
 		color: 'white',

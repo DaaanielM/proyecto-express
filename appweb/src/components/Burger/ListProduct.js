@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../../assets/css/Cards.module.css';
 import ListCategorias from '../Burger/ListCategorias';
 import { getProductos } from '../services/index';
+
 export default function ListProducts() {
 	const [products, setProducts] = useState([]);
 	useEffect(() => {

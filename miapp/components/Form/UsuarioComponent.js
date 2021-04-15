@@ -9,7 +9,12 @@ import {
 
 export default function Usuario() {
 	return (
-		<View>
+		<View
+			style={{
+				flexDirection: 'column',
+				justifyContent: 'center',
+				alignItems: 'center',
+			}}>
 			<Text style={styles.text}> Usuario </Text>
 			<TextInput style={styles.input} />
 		</View>
@@ -17,11 +22,11 @@ export default function Usuario() {
 }
 const styles = StyleSheet.create({
 	text: {
-		color: '#fff',
+		color: '#000',
 		fontWeight: 'bold',
 		fontSize: 15,
-		textAlign: 'center',
 		letterSpacing: 1,
+		paddingLeft: 10,
 	},
 	input: {
 		borderWidth: 1,

@@ -4,10 +4,12 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-const BtnOrden = ({ text }) => {
+const BotonPedidos = ({ text }) => {
 	const navigation = useNavigation();
 	return (
-		<TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+		<TouchableOpacity
+			style={{ justifyContent: 'center', alignItems: 'center' }}
+			onPress={() => navigation.navigate('Menu')}>
 			<View style={styles.btnContainer}>
 				<Text style={styles.buttonText}>{text}</Text>
 			</View>
@@ -23,13 +25,14 @@ styles = StyleSheet.create({
 		borderRadius: 50,
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginTop: 50,
+		marginTop: 40,
 	},
 	buttonText: {
 		color: 'white',
 		fontWeight: 'bold',
 		fontSize: 18,
+		textTransform: 'uppercase',
 	},
 });
 
-export default BtnOrden;
+export default BotonPedidos;

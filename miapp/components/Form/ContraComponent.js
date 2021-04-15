@@ -9,7 +9,12 @@ import {
 
 export default function Contra() {
 	return (
-		<View>
+		<View
+			style={{
+				flexDirection: 'column',
+				justifyContent: 'center',
+				alignItems: 'center',
+			}}>
 			<Text style={styles.text}>Contraseña </Text>
 			<TextInput style={styles.input} secureTextEntry={true} />
 		</View>
@@ -18,11 +23,11 @@ export default function Contra() {
 
 const styles = StyleSheet.create({
 	text: {
-		color: '#fff',
+		color: '#000',
 		fontWeight: 'bold',
 		fontSize: 15,
-		textAlign: 'center',
 		letterSpacing: 1,
+		paddingLeft: 15,
 	},
 	input: {
 		borderWidth: 1,

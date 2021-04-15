@@ -11,6 +11,7 @@ import Productos from './Productos';
 import Contacto from './Contacto';
 import Perfil from './Perfil';
 import Login from './Login';
+import Pedidos from './Pedidos';
 import Nav from '../components/Burger/Nav';
 
 export default function Container() {
@@ -25,6 +26,7 @@ export default function Container() {
 					<Route path={'/Perfil'} component={Perfil}></Route>
 					<Route path={'/Productos'} component={Productos}></Route>
 					<Route path={'/Login'} component={Login}></Route>
+					<Route path={'/Pedidos'} component={Pedidos}></Route>
 					{/* <Route path={'/Categorias'} component={Categorias}></Route> */}
 				</Switch>
 			</>

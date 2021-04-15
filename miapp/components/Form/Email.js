@@ -19,19 +19,21 @@ export default function Email() {
 
 const styles = StyleSheet.create({
 	text: {
-		color: '#fff',
+		color: '#000',
 		fontWeight: 'bold',
 		fontSize: 15,
-		textAlign: 'center',
 		letterSpacing: 1,
+		textAlign: 'center',
+		marginBottom: 10,
 	},
 	input: {
 		borderWidth: 1,
 		borderColor: '#ABABAB',
 		borderRadius: 18,
-		padding: 7,
-		margin: 10,
+		padding: 8,
 		width: 250,
 		color: '#fff',
+		marginBottom: 8
+		
 	},
 });
