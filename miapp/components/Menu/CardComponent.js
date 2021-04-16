@@ -39,6 +39,7 @@ const CardComponent = () => {
 					</TouchableOpacity>
 				</View>
 			</View>
+
 			<View style={{ paddingHorizontal: 20, marginTop: 50 }}>
 				<Text style={styles.subtitulo}>Haz tu pedido</Text>
 				<Text style={styles.sub}>Encuentra tu comida favorita...</Text>

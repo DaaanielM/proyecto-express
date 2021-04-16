@@ -5,11 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import Login from './Login';
-import Home from './Home';
-import Registro from './Registro';
-import Menu from './Menu';
-import Pedidos from './Pedidos';
+import Login from '../screens/Login';
+import Home from '../screens/Home';
+import Registro from '../screens/Registro';
+import Menu from '../screens/Menu';
+import Pedidos from '../screens/Pedidos';
+import Perfil from '../screens/Perfil';
+
 const Drawer = createDrawerNavigator();
 
 export default function Index() {
@@ -21,6 +23,7 @@ export default function Index() {
 				<Drawer.Screen name='Home' component={Home} />
 				<Drawer.Screen name='Menu' component={Menu} />
 				<Drawer.Screen name='Pedidos' component={Pedidos} />
+				<Drawer.Screen name='Perfil' component={Perfil} />
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);

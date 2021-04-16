@@ -42,7 +42,7 @@ const VistaComponent = () => {
 				</View>
 				<View style={{ width: '10%' }}>
 					<TouchableOpacity
-						onPress={() => navigation.navigate('Home')}>
+						onPress={() => navigation.navigate('Perfil')}>
 						<Icon name='user' size={25} />
 					</TouchableOpacity>
 				</View>
@@ -119,11 +119,7 @@ const VistaComponent = () => {
 							marginHorizontal: 30,
 						}}>
 						<Text style={styles.subtitulo}>Total</Text>
-						<Text
-							style={styles.precioTotal}
-							onPress={{ precioTotal }}>
-							${total}
-						</Text>
+						<Text style={styles.precioTotal}>$0</Text>
 					</View>
 					<View style={{}}>
 						<BotonPedidos text='Comprar' />

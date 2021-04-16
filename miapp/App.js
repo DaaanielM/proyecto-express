@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-import Index from './screens/Index';
+import Index from './routers/Index';
 
 export default function App() {
 	return <Index />;
