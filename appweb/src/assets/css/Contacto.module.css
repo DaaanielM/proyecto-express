@@ -29,6 +29,15 @@
     align-items: center;
 }
 
+#radio {
+    background: 'red';
+    width: 50%,
+}
+
+#button {
+    margin-top: 1220px,
+}
+
 #titulo,
 #ff,
 #email,

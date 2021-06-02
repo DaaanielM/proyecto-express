@@ -1,9 +1,37 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import Icon from '@expo/vector-icons/Entypo';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, TouchableOpacity, Modal } from 'react-native';
+import { Button, Text, Avatar } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import FormModal from './FormModal';
+// import Icon from '@expo/vector-icons/Entypo';
 import { useNavigation } from '@react-navigation/native';
+
+import { getPerfil, getDirecciones } from '../../services/perfil/perfil';
+
 const User = () => {
 	const navigation = useNavigation();
+
+	const [perfil, setPerfil] = useState([]);
+	const [direccion, setDireccion] = useState([]);
+	
+	// Actualizar
+	async function loadPerfil() {
+		const response = await getPerfil();
+		const dir = await getDirecciones();
+		if (response.status === 200) {
+			setPerfil(response.data.datos[0]);
+		}
+		if (dir.status === 200) {
+			setDireccion(dir.data.datos[0]);
+		}
+	}
+	// const updateUsuario = (id) => {
+	// 	setId(id);
+	// 	OpenModal();
+	// };
+	useEffect(() => {
+		loadPerfil();
+	}, []);
 
 	return (
 		<View style={styles.container}>
@@ -12,8 +40,8 @@ const User = () => {
 					<TouchableOpacity onPress={() => navigation.openDrawer()}>
 						<Icon
 							style={{ color: 'white' }}
-							name='menu'
-							size={32}
+							name='bars'
+							size={28}
 						/>
 					</TouchableOpacity>
 				</View>
@@ -39,19 +67,92 @@ const User = () => {
 				</View>
 			</View>
 			<View style={styles.header}>
-				<Image
-					style={styles.image}
-					source={require('../../Images/usuario.png')}
+				<Avatar
+					rounded
+					source={{
+						uri: 'https://cdn.icon-icons.com/icons2/3007/PNG/512/github_logo_icon_188438.png',
+					}}
+					size='large'
+					style={{ width: 120, height: 120 }}
 				/>
 				<Text style={styles.texto}>Información personal</Text>
 			</View>
 			<View style={styles.card}>
-				<Text style={styles.nombre}>Nombre: Daniel Brand</Text>
-				<Text style={styles.nombre}>Correo: dani@gmail.com</Text>
-
-				<Text style={styles.nombre}>Teléfono: 3213769938</Text>
-
-				<Text style={styles.nombre}>Dirección: Cll 9 #18-51</Text>
+				<View style={styles.cardxd} key={perfil.id}>
+					<Text
+						style={{
+							color: '#2BABE2',
+							fontWeight: 'bold',
+							textAlign: 'justify',
+							borderColor: '#c6c6c6',
+							fontSize: 22,
+							letterSpacing: 0.5,
+							marginTop: 50,
+							marginLeft: 65,
+						}}>
+						Nombre:{' '}
+						<Text style={styles.nombre}>{perfil.nombre}</Text>
+					</Text>
+					<Text
+						style={{
+							color: '#2BABE2',
+							fontWeight: 'bold',
+							textAlign: 'justify',
+							borderColor: '#c6c6c6',
+							fontSize: 22,
+							letterSpacing: 0.5,
+							marginTop: 50,
+							marginLeft: 65,
+						}}>
+						Correo:{' '}
+						<Text style={styles.nombre}>{perfil.correo}</Text>
+					</Text>
+					<Text
+						style={{
+							color: '#2BABE2',
+							fontWeight: 'bold',
+							textAlign: 'justify',
+							borderColor: '#c6c6c6',
+							fontSize: 22,
+							letterSpacing: 0.5,
+							marginTop: 50,
+							marginLeft: 65,
+						}}>
+						Teléfono:{' '}
+						<Text style={styles.nombre}>{perfil.telefono}</Text>
+					</Text>
+					<Text
+						style={{
+							color: '#2BABE2',
+							fontWeight: 'bold',
+							textAlign: 'justify',
+							borderColor: '#c6c6c6',
+							fontSize: 22,
+							letterSpacing: 0.5,
+							marginTop: 50,
+							marginLeft: 65,
+						}}>
+						Contraseña:{' '}
+						<Text style={styles.nombre}>{perfil.contrasena}</Text>
+					</Text>
+					<Text
+						style={{
+							color: '#2BABE2',
+							fontWeight: 'bold',
+							textAlign: 'justify',
+							borderColor: '#c6c6c6',
+							fontSize: 22,
+							letterSpacing: 0.5,
+							marginTop: 50,
+							marginLeft: 65,
+						}}>
+						Dirección:{' '}
+						<Text style={styles.nombre}>
+							{direccion.direccion} - {direccion.barrio}
+						</Text>
+					</Text>
+				</View>
+				
 			</View>
 		</View>
 	);
@@ -94,28 +195,22 @@ const styles = StyleSheet.create({
 	},
 	card: {
 		flex: 2,
-		backgroundColor: '#F2F9FC',
-
-		borderWidth: 1,
-		borderColor: '#c6c6c6',
-		paddingHorizontal: 150,
+		backgroundColor: '#fff',
 		borderTopLeftRadius: 30,
 		borderTopRightRadius: 30,
+		borderColor: '#ABABAB',
 	},
 	nombre: {
-		marginTop: 44,
 		fontWeight: 'bold',
-		justifyContent: 'center',
-		alignItems: 'center',
-		textAlign: 'center',
-		borderRadius: 20,
-		width: 280,
-		borderWidth: 1,
+		textAlign: 'justify',
 		borderColor: '#c6c6c6',
-		marginLeft: -82,
 		fontSize: 18,
 		color: '#000000',
-		padding: 20,
-		letterSpacing: 1,
+		letterSpacing: 0.5,
+		marginTop: 50,
+		marginLeft: 65,
+	},
+	cardxd: {
+		marginBottom: 40,
 	},
 });

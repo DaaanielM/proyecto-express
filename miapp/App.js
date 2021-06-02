@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 
 import Index from './routers/Index';
-
+import LoginNavigator from './routers/LoginNavigator';
 export default function App() {
 	return <Index />;
 }

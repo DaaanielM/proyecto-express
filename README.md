@@ -1,6 +1,0 @@
-Backend proyecto
-
-```
-npm install
-
-```

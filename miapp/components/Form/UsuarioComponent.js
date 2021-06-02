@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
 		padding: 8,
 		margin: 10,
 		width: 250,
-		color: '#fff',
+		color: '#000',
 	},
 });

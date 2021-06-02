@@ -16,7 +16,19 @@ controller.listar = async (req, res) => {
 		});
 	}
 };
-
+controller.obtenerPedido = async (req, res) => {
+	try {
+		const resultados = await model.obtenerPedido(req.params.id);
+		res.json({
+			datos: resultados,
+		});
+	} catch (error) {
+		res.json({
+			mensaje: 'Ha ocurrido un error, contacte con el admin',
+			error: true,
+		});
+	}
+};
 controller.crear = async (req, res) => {
 	try {
 		const datos = {

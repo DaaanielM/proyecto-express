@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	View,
 	Text,
@@ -10,9 +10,27 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import Agregar from './Agregar';
 import Icon from '@expo/vector-icons/Entypo';
+import { api, getProductos } from '../../services/Index';
+import { getCategoria } from '../../services/categorias/categorias';
 
 const CardComponent = () => {
 	const navigation = useNavigation();
+	const [products, setProducts] = useState([]);
+	const [categories, setCategories] = useState([]);
+
+	useEffect(() => {
+		async function loadProducts() {
+			const response = await getProductos();
+			const resCat = await getCategoria();
+			if (response.status === 200) {
+				setProducts(response.data.datos);
+			}
+			if (resCat.status === 200) {
+				setCategories(resCat.data.datos);
+			}
+		}
+		loadProducts();
+	}, []);
 
 	return (
 		<ScrollView style={styles.container}>
@@ -48,70 +66,25 @@ const CardComponent = () => {
 				horizontal
 				showsHorizontalScrollIndicator={false}
 				style={{ marginTop: 40 }}>
-				<View
-					style={{
-						alignItems: 'center',
-						flexDirection: 'row',
-						backgroundColor: '#f9dd7a',
-						marginHorizontal: 15,
-						borderRadius: 25,
-						paddingVertical: 5,
-						paddingHorizontal: 15,
-					}}>
-					<Image
-						style={styles.imageHorizontal}
-						source={require('../../Images/5.png')}
-					/>
-					<Text style={styles.textImg}>Burgers</Text>
-				</View>
-				<View
-					style={{
-						alignItems: 'center',
-						flexDirection: 'row',
-						backgroundColor: '#e5e4eb',
-						marginHorizontal: 15,
-						borderRadius: 25,
-						paddingVertical: 5,
-						paddingHorizontal: 15,
-					}}>
-					<Image
-						style={styles.imageHorizontal}
-						source={require('../../Images/sand.png')}
-					/>
-					<Text style={styles.textImg}>Sandwichs</Text>
-				</View>
-				<View
-					style={{
-						alignItems: 'center',
-						flexDirection: 'row',
-						backgroundColor: '#D6F9C6',
-						marginHorizontal: 15,
-						borderRadius: 25,
-						paddingVertical: 5,
-						paddingHorizontal: 15,
-					}}>
-					<Image
-						style={styles.imageHorizontal}
-						source={require('../../Images/ensalada.png')}
-					/>
-					<Text style={styles.textImg}>Ensaladas</Text>
-				</View>
-				<View
-					style={{
-						alignItems: 'center',
-						flexDirection: 'row',
-						backgroundColor: '#EDA7FA',
-						marginHorizontal: 15,
-						borderRadius: 25,
-						paddingVertical: 5,
-						paddingHorizontal: 15,
-					}}>
-					<Image
-						style={styles.imageHorizontal}
-						source={require('../../Images/soda.png')}
-					/>
-					<Text style={styles.textImg}>Bebidas</Text>
-				</View>
+				{categories.map((item) => (
+					<View
+						key={item.id}
+						style={{
+							alignItems: 'center',
+							flexDirection: 'row',
+							backgroundColor: '#f9dd7a',
+							marginHorizontal: 15,
+							borderRadius: 25,
+							paddingVertical: 5,
+							paddingHorizontal: 15,
+						}}>
+						<Image
+							style={styles.imageHorizontal}
+							source={require('../../Images/xdd.png')}
+						/>
+						<Text style={styles.textImg}>{item.nombre}</Text>
+					</View>
+				))}
 			</ScrollView>
 
 			<View
@@ -144,42 +117,29 @@ const CardComponent = () => {
 						marginHorizontal: 15,
 						marginTop: 5,
 					}}>
-					<View style={styles.card}>
-						<Image
-							style={styles.imageProduct}
-							source={require('../../Images/h1.jpg')}
-						/>
-						<Text style={styles.nameProduct}>La zorra</Text>
-						<Text style={styles.descripProduct}>
-							Tiene carne, vegetales y queso
-						</Text>
-						<Text style={styles.precioProduct}>$ 8000</Text>
-						<Agregar text='Agregar' />
-					</View>
-					<View style={styles.card}>
-						<Image
-							style={styles.imageProduct}
-							source={require('../../Images/h2.jpg')}
-						/>
-						<Text style={styles.nameProduct}>La bandida</Text>
-						<Text style={styles.descripProduct}>
-							Tiene doble carne, vegetales y doble queso
-						</Text>
-						<Text style={styles.precioProduct}>$ 8000</Text>
-						<Agregar text='Agregar' />
-					</View>
-					<View style={styles.card}>
-						<Image
-							style={styles.imageProduct}
-							source={require('../../Images/h4.jpg')}
-						/>
-						<Text style={styles.nameProduct}>La picara</Text>
-						<Text style={styles.descripProduct}>
-							Tiene carne, salchicha y vegetales
-						</Text>
-						<Text style={styles.precioProduct}>$ 12000</Text>
-						<Agregar text='Agregar' />
-					</View>
+					{products.map((product) => {
+						return (
+							<View style={styles.card} key={product.id}>
+								<Image
+									style={styles.imageProduct}
+									source={{
+										uri: api + 'img/' + product.foto,
+									}}
+								/>
+								<Text style={styles.nameProduct}>
+									{product.nombre}
+								</Text>
+								<Text style={styles.descripProduct}>
+									{product.descripcion}
+								</Text>
+								<Text style={styles.precioProduct}>
+									<Text style={{ color: '#2BBA18' }}>$ </Text>
+									{product.precio}
+								</Text>
+								<Agregar text='Agregar' />
+							</View>
+						);
+					})}
 				</View>
 			</ScrollView>
 		</ScrollView>
@@ -219,7 +179,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		fontSize: 18,
 		paddingLeft: 10,
-		color: '#252525',
+		color: 'black',
 	},
 	card: {
 		width: '80%',
@@ -238,7 +198,7 @@ const styles = StyleSheet.create({
 	nameProduct: {
 		textAlign: 'center',
 		marginTop: 8,
-		color: 'black',
+		color: '#EA1E1E',
 		fontWeight: 'bold',
 		fontSize: 22,
 	},

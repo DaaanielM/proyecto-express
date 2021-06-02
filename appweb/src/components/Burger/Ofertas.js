@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getOfertas } from '../services/index';
 import styles from '../../assets/css/Ofertas.module.css';
+
 const Ofertas = () => {
 	const [ofertas, setOfertas] = useState([]);
 	useEffect(() => {
@@ -15,6 +16,7 @@ const Ofertas = () => {
 	}, []);
 	return (
 		<div>
+
 			{ofertas.map((item) => (
 				<div className={styles.ofertas} key={item.id}>
 					<h2 className={styles.nombre}>{item.nombre}</h2>

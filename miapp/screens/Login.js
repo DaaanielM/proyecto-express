@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 import NombreCompleto from '../components/Form/NombreComponent';
 import Edad from '../components/Form/EdadComponent';
 import Usuario from '../components/Form/UsuarioComponent';
@@ -10,6 +10,7 @@ import Boton from '../components/Form/Button';
 import ButtonRegister from '../components/Form/ButtonRegister';
 import Email from '../components/Form/Email';
 import Error from '../components/Form/Error';
+import { Input } from 'react-native-elements';
 
 export default function Login() {
 	return (
@@ -26,9 +27,28 @@ export default function Login() {
 				{/* <Error error={'El usuario o la contraseña son incorrectos'} /> */}
 
 				<View style={styles.formContainer}>
-					<Usuario />
+					<Input
+						style={styles.input}
+						placeholderTextColor={'gray'}
+						placeholder='Nombre'
+						//El campo sería nombre y el valor sería valor ( que es lo que pongamos en nuestro input)
+						onChangeText={(valor) => chanfeForm('nombre', valor)}
+						leftIcon={<Icon name='user' size={24} color='white' />}
+						leftIcon={
+							<Icon name='user' size={24} color='#D0D3D3' />
+						}
+					/>
 
-					<Contra />
+					<Input
+						secureTextEntry={true}
+						style={styles.input}
+						placeholderTextColor={'gray'}
+						placeholder='Contraseña'
+						onChangeText={(valor) =>
+							chanfeForm('contrasena', valor)
+						}
+						leftIcon={<Icon name='key' size={24} color='#D0D3D3' />}
+					/>
 
 					<Boton text='Iniciar Sesión' />
 
@@ -57,7 +77,7 @@ const styles = StyleSheet.create({
 		paddingVertical: 150,
 		paddingHorizontal: 30,
 		borderColor: '#ABABAB',
-		paddingBottom: 300,
+		paddingBottom: 220,
 	},
 	titulo: {
 		marginBottom: 20,
@@ -79,6 +99,6 @@ const styles = StyleSheet.create({
 		borderRadius: 30,
 		paddingHorizontal: 50,
 		paddingVertical: 30,
-		marginTop: -40,
+		marginTop: -100,
 	},
 });

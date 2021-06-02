@@ -60,3 +60,50 @@ export async function getPedidos() {
 		console.log(error);
 	}
 }
+
+export async function getContactos() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/contactos`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export async function getDirecciones() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/direcciones/listar`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export async function getTipos() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/tipos/listar`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}
+export async function getSuscripciones() {
+	try {
+		const respuesta = await axios({
+			url: `http://localhost:4000/suscripciones/listar`,
+			method: 'get',
+		});
+		return respuesta;
+	} catch (error) {
+		console.log(error);
+	}
+}

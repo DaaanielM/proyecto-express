@@ -4,10 +4,9 @@ const model = {};
 
 model.listar = async (idUsuario) => {
 	try {
-		const sql = `SELECT us.nombre, us.telefono, di.direccion, di.barrio, pe.id FROM pedidos pe
+		const sql = `SELECT us.id id_usuarios, di.id id_direccion, us.nombre, us.telefono, di.direccion, di.barrio, pe.id FROM pedidos pe
         INNER JOIN usuarios us ON us.id = pe.id_usuario
-        INNER JOIN direcciones di ON di.id = pe.id_direccion
-        WHERE pe.id_usuario = ${idUsuario}`;
+        INNER JOIN direcciones di ON di.id = pe.id_direccion`;
 		let resultados = await conexion.query(sql);
 		await model.obtenerProductos(resultados);
 		return resultados;
@@ -31,6 +30,16 @@ model.obtenerProductos = async (datos) => {
 			pedido.productos = await conexion.query(sql);
 		});
 		return Promise.all(datosModificados);
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+model.obtenerPedido = async (id) => {
+	try {
+		const sql = `SELECT * FROM pedidos WHERE id = ${id}`;
+		const resultados = await conexion.query(sql);
+		return resultados && resultados.length ? resultados[0] : null; // Validar que exista un array que esta lleno y si esta lleno devuelva el primer elemento del array
 	} catch (error) {
 		console.log(error);
 	}

@@ -4,6 +4,7 @@ const router = express.Router();
 const controller = require('../controllers/productos.controller');
 
 router.get('/listar', controller.listar);
+router.get('/obtenerProducto/:id', controller.obtenerProducto);
 router.post('/crear', controller.crear);
 router.put('/actualizar/:id', controller.actualizar);
 router.delete('/eliminar/:id', controller.eliminar);
@@ -14,6 +15,5 @@ router.get('/listar-app', controller.listar);
 router.post('/crear-app', controller.crear);
 router.put('/actualizar-app/:id', controller.actualizar);
 router.delete('/eliminar-app/:id', controller.eliminar);
-
 
 module.exports = router;

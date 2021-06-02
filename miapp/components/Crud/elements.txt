@@ -1,0 +1,39 @@
+            <Header
+				leftComponent={{ icon: 'menu', color: '#fff' }}
+				centerComponent={{
+					text: 'Agregar usuario',
+					style: { color: '#fff' },
+				}}
+				rightComponent={{ icon: 'home', color: '#fff' }}
+			/>
+			------------ <View style={styles.Cont}> -----------------------
+			<Image
+					source={{
+						uri: 'https://images.unsplash.com/photo-1554252116-cb46b6d2df78?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+					}}
+					style={{ width: 390, height: 180, marginBottom: 10 }}
+			/>
+
+            <Avatar
+						rounded
+						source={{
+							uri: 'https://cdn.icon-icons.com/icons2/3007/PNG/512/github_logo_icon_188438.png',
+						}}
+						size='large'
+						style={{ width: 40, height: 40 }}
+			/>
+
+icono nombre
+leftIcon={<Icon name='user' size={24} color='white' />}
+
+icono Correo
+leftIcon={<Icon name='envelope-square' size={24} color='white' />}
+
+icono Telefono
+leftIcon={<Icon name='phone' size={24} color='white' />}
+
+icono contrasena
+leftIcon={<Icon name='key' size={24} color='white' />}
+
+icono button
+icon={<Icon name='arrow-right' size={15} color='white' />}

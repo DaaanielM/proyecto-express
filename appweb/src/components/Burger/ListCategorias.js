@@ -3,6 +3,7 @@ import { getCategorias } from '../services/index';
 import FooterComponent from '../../components/Burger/FooterComponent';
 import '../../assets/css/Footer.css';
 import styles from '../../assets/css/Categorias.module.css';
+import Nav from './Nav';
 
 const ListCategorias = () => {
 	const [categorias, setCategorias] = useState([]);
@@ -18,6 +19,7 @@ const ListCategorias = () => {
 	}, []);
 	return (
 		<>
+			<Nav />
 			<div className={styles.catpadre}>
 				{categorias.map((item) => (
 					<h2 className={styles.categorias}>{item.nombre}</h2>

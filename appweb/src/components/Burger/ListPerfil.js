@@ -3,6 +3,8 @@ import { getPerfil } from '../services/index';
 import Imagen from '../../assets/img/usuario.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobile, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import Nav from './Nav';
+
 import styles from '../../assets/css/Perfil.module.css';
 const ListPerfil = () => {
 	const [perfil, setPerfil] = useState([]);
@@ -18,6 +20,7 @@ const ListPerfil = () => {
 	}, []);
 	return (
 		<div className={styles.perfil}>
+			<Nav />
 			<section className={styles.seccionperfilusuario}>
 				<div className={styles.perfilusuarioheader}>
 					<div className={styles.perfilusuarioportada}>

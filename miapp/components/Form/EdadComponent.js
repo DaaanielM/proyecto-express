@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 export default function Edad() {
 	return (
 		<View>
-			<Text style={styles.text}>Edad </Text>
+			<Text style={styles.text}>Edad</Text>
 			<TextInput style={styles.input} />
 		</View>
 	);
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
 		padding: 7,
 		margin: 10,
 		width: 250,
-		color: '#fff',
+		color: 'black',
 	},
 });
