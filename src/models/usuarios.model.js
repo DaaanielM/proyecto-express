@@ -35,7 +35,7 @@ model.actualizar = async (datos, id) => {
 	try {
 		const sql = `UPDATE usuarios SET ? WHERE id = ${id}`;
 		await conexion.query(sql, datos);
-	} catch (error) {
+	} catch (error) { 
 		console.log(error);
 	}
 };

@@ -1,23 +1,63 @@
 import React, { useState } from 'react';
 import Burger from '../../../assets/img/burger.jpg';
 import styles from '../../../assets/css/Login.module.css';
+import { isValidEmail } from '../../../helpers/validations';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { getRegistro } from '../../services/registro/registroview';
-function Registro() {
+
+const Registro = () => {
+	const history = useHistory();
+
 	const [registro, setRegistro] = useState({
 		nombre: '',
 		correo: '',
 		telefono: '',
 		contrasena: '',
 	});
-	const changeForm = (field, value) => {
-		setRegistro({ ...registro, [field]: value });
+
+	const [error, setError] = useState('');
+
+	// Esta función es para capturar los datos de registro
+	const onChange = (e) => {
+		setRegistro({
+			...registro,
+			[e.target.name]: e.target.value,
+		});
 	};
-	const submit = async (event) => {
-		event.preventDefault();
+
+	const onSubmit = async (e) => {
+		// TODA LA VALIDAERGFRGE
+
+		const { nombre, correo, telefono, contrasena } = registro;
+
+		if (nombre === '') {
+			setError('Complete el nombre perro hp');
+			return;
+		}
+		if (correo === '') {
+			setError('Complete el correo perro hp');
+			return;
+		}
+		if (!isValidEmail(correo)) {
+			setError('El correo no es valido perro hp');
+			return;
+		}
+		if (telefono === '') {
+			setError('Complete el correo perro hp');
+			return;
+		}
+		if (contrasena === '') {
+			setError('Complete el correo perro hp');
+			return;
+		}
+
+		history.push('/Login');
+
+		e.preventDefault();
 		await getRegistro(registro);
 	};
+
 	return (
 		<div className='container' id={styles.container}>
 			<div className='field column is-5 is-offset-4'>
@@ -39,14 +79,9 @@ function Registro() {
 								<input
 									className='input is-large'
 									type='text'
+									name='nombre'
 									placeholder='Nombre'
-									value={registro.nombre}
-									onChange={(event) => {
-										changeForm(
-											'nombre',
-											event.target.value
-										);
-									}}
+									onChange={onChange}
 								/>
 							</div>
 						</div>
@@ -55,14 +90,9 @@ function Registro() {
 								<input
 									className='input is-large'
 									type='email'
+									name='correo'
 									placeholder='Correo'
-									value={registro.correo}
-									onChange={(event) => {
-										changeForm(
-											'correo',
-											event.target.value
-										);
-									}}
+									onChange={onChange}
 								/>
 							</div>
 						</div>
@@ -71,14 +101,9 @@ function Registro() {
 								<input
 									className='input is-large'
 									type='number'
+									name='telefono'
 									placeholder='Teléfono'
-									value={registro.telefono}
-									onChange={(event) => {
-										changeForm(
-											'telefono',
-											event.target.value
-										);
-									}}
+									onChange={onChange}
 								/>
 							</div>
 						</div>
@@ -87,22 +112,23 @@ function Registro() {
 								<input
 									className='input is-large'
 									type='password'
+									name='contrasena'
 									placeholder='Password'
-									value={registro.contrasena}
-									onChange={(event) => {
-										changeForm(
-											'contrasena',
-											event.target.value
-										);
-									}}
+									onChange={onChange}
 								/>
 							</div>
 						</div>
+						{error ? (
+							<div className='notification is-danger'>
+								<p>{error}</p>
+							</div>
+						) : null}
 					</form>
 					<div>
 						<br></br>
 						<button
-							onClick={submit}
+							onClick={onSubmit}
+							type='submit'
 							className='button is-block is-warning is-large is-fullwidth'
 							style={{
 								color: '#FFFFFF',
@@ -128,6 +154,6 @@ function Registro() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Registro;
